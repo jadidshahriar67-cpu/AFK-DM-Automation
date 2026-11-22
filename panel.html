@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AFK DM Automation</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <img class="logo" src="icons/icon48.png" alt="AFK DM Automation logo">
+      <div>
+        <h1>AFK DM Automation</h1>
+        <p class="sub">V5 · Timed draft assistant</p>
+      </div>
+    </header>
+
+    <label for="customText">Message text</label>
+    <textarea id="customText" rows="4" placeholder="Write your message..."></textarea>
+    <button id="save" class="secondary">Save text</button>
+
+    <section class="preview">
+      <div class="row"><span>Next draft preview</span><span id="percent">1%</span></div>
+      <p id="previewText">Your message 1%</p>
+    </section>
+
+    <section class="progress-wrap">
+      <div class="row"><strong>Progress</strong><strong id="progressLabel">0%</strong></div>
+      <div class="track"><div id="progressBar"></div></div>
+    </section>
+
+    <div class="controls">
+      <button id="start">Start</button>
+      <button id="pause" class="secondary">Pause</button>
+      <button id="reset" class="danger">Reset</button>
+    </div>
+
+    <p id="status" role="status">Ready. Open an Instagram chat first.</p>
+    <div class="note">
+      <strong>AFK mode · 50-second interval</strong>
+      <p>Every 50 seconds, the extension replaces all text currently in the Instagram message box with the next percentage draft (1%–100%). Chrome zoom is set to 100% while running and restored when paused, reset, completed, or stopped by an error. It never clicks Send or presses Enter. You must review and send each message yourself.</p>
+    </div>
+    <p class="warning">Warning: any unsent text in the message box will be erased at each update. Keep the same Instagram chat open and active.</p>
+  </main>
+  <script src="panel.js"></script>
+</body>
+</html>
